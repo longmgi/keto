@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body{
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        @apply lg:text-xl;
+        line-height: 24px;
+        @apply lg:leading-7;
+        color: #2A363E;
+    }
+    li {
+		list-style: none;
+	}
+    h1 {
+        font-size: 24px;
+        @apply lg:text-5xl;
+        @apply font-bold;
+        line-height: 36px;
+        @apply lg:leading-[68px];
+    }
+    h2 {
+        font-size: 24px;
+        @apply lg:text-[32px];
+        @apply font-bold;
+        line-height: 34px;
+        @apply lg:leading-[42px];
+    }
+    h3{
+        @apply text-base;
+        @apply lg:text-2xl;
+        line-height: 28px;
+        @apply lg:leading-[34px];
+    }
+    h4{
+        @apply text-xl;
+        @apply font-bold;
+        line-height: 21px;
+    }
+    ul li{
+		@apply leading-normal;
+        @apply pb-[18px];
+    }
+    ul li:last-child{
+        @apply pb-0;
+    }
+}
+@layer components{
+
+	.slide::-webkit-scrollbar {
+		display: none;
+	}
+	.slide{
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
+        scroll-snap-type: x mandatory;
+        scroll-snap-type: mandatory;
+        scroll-snap-points-x: repeat(300px);
+	}
+    .slide .item-scroll{
+        scroll-snap-align: start;
+    }
+}
